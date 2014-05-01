@@ -1,20 +1,5 @@
-<html>
-
-	<head>
-		<title> Debauchary's VTFlix</title>
-	</head>
-
-	<body onload="load_content()" style="background-color:#AAAAAA">
-		<div id="page_content">
-			<?php echo '<p>Hello World!</p>'; ?>
-		</div> 
-	</body>
-
-</html>
-
-
 <?php
-	include('../ANOTHERFILE.php');
+	/*include('../ANOTHERFILE.php');
 
 	$header = '<head><title>FART</title></head>' . "\n";
 	$body = '<body>BIGGER FART</body>' . "\n";
@@ -26,5 +11,14 @@
 	while ($res)
 	echo $res[0]['FIRST_NAME'];
 
-	echo '<html>' . $header . $body . '</html>';
+	echo '<html>' . $header . $body . '</html>';*/
+
+	include('./index.html');
+
+	/*$con = pg_connect("port=5432 dbname=Debauchery user=Dirker27 password=sH@dow77")
+		or die ("Failed to connect to DB: " . pg_last_error());
+	$result = pg_query($con, $_GET["query"]) 
+		or die("Could not process query: " . pg_last_error());*/
+
+
 ?>
