@@ -20,5 +20,7 @@
 	$result = pg_query($con, $_GET["query"]) 
 		or die("Could not process query: " . pg_last_error());*/
 
+		
+
 
 ?>
