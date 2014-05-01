@@ -1,15 +1,14 @@
 body {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	color: black;
-	background-color: #d8da3d
+	font-family: 'Arimo', sans-serif;
+	color: #FFFFFF;
+	background-color: #000066
 }
 h1 {
-	font-family: Helvetica, Geneva, Arial,
-	SunSans-Regular, sans-serif
+	font-family: 'Arimo', sans-serif;
+	color: 31F0B1;
 }
 h4 {
-	font-family: Helvetica, Geneva, Arial,
-	SunSans-Regular, sans-serif
+	font-family: 'Arimo', sans-serif;
 }
 /*p {
 	padding: 1px, 1px, 1px, 1px;
