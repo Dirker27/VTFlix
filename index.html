@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML PUBLIC>
 
 <html>
@@ -23,11 +24,11 @@
 			style="border:solid black 1px;">
 			Relations
 			<ul>
-				<li> Performer </li>
-				<li> Director </li>
-				<li> MovieInfo </li>
-				<li> TVEpisodeInfo </li>
-				<li> UserInfo </li>
+				<li><a onclick="sendRelation(1);" href="#"> Performer </a></li>
+				<li><a onclick="sendRelation(2);" href="#"> Director </a></li>
+				<li><a onclick="sendRelation(3);" href="#"> MovieInfo </a></li>
+				<li><a onclick="sendRelation(4);" href="#"> TVEpisodeInfo </a></li>
+				<li><a onclick="sendRelation(5);" href="#"> UserInfo </a></li>
 			</ul>
 		</div>
 
@@ -36,13 +37,19 @@
 			style="border:solid black 1px;">
 			Queries
 			<ul>
-				<li> Performer </li>
-				<li> Director </li>
-				<li> MovieInfo </li>
-				<li> TVEpisodeInfo </li>
-				<li> UserInfo </li>
+				<li><a onclick="sendQuery(1);" href="#"> Performer </a></li>
+				<li><a onclick="sendQuery(2);" href="#"> Director </a></li>
+				<li><a onclick="sendQuery(3);" href="#"> MovieInfo </a></li>
+				<li><a onclick="sendQuery(4);" href="#"> TVEpisodeInfo </a></li>
+				<li><a onclick="sendQuery(5);" href="#"> UserInfo </a></li>
 			</ul>
 		</div>
+
+		<form id="portal" action="./includes/php/results.php" method="POST">
+			<input type="hidden" id="r_v" name="relation" value="-1"/>
+			<input type="hidden" id="q_v" name="query" value="-1"/>
+		</form>
+
 	</body>
 
 </html>
