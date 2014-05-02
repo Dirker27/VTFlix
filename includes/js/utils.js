@@ -28,8 +28,8 @@ function sendRelation(r) {
 		break;
 	}
 
-	data.setAttribute('value', sql);
-	form.submit();
+	data.value = sql;
+	//form.submit();
 }
 
 function sendQuery(q) {
@@ -62,6 +62,6 @@ function sendQuery(q) {
 		break;
 	}
 
-	data.setAttribute('value', sql);
-	form.submit();
+	data.value = sql;
+	//form.submit();
 }
