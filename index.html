@@ -7,23 +7,31 @@
 		<title> Team Debauchery's VTFlix </title>
 		<link rel="stylesheet" type="text/css" href="./includes/css/style.css">
 		<script type="text/javascript" src="./includes/js/utils.js"></script>
+		<style>
+		img 
+		{
+		float:right;
+		}
+		</style>
 	</head>
 
 	<body style="background-color:#151828">
 		
 		<div id="header_content" >
+			<a href="http://imgur.com/1ajuN5B"><img src="http://i.imgur.com/1ajuN5B.png" float=right title="Hosted by imgur.com" height=200 width=500 style="margin-right:160" /></a>
 			<h1> VTFlix </h1>
 			<h3> A social video database </h3>
 			<h4> Team Debauchery - Ariel Cohen - Dirk Hortensius </h4>
 		</div>
 
-		<div id="page_content" style="border-top:solid #31F0B1 2px; font-size:1.2em; padding-top:30; padding-left:30; margin-left:10; margin-right:10" >
+		<div id="page_content1"
+			style="border-top:solid #31F0B1 2px; font-size:1.2em; padding-top:30; padding-left:30; margin-left:5; margin-right:5" >
 			Directions on how to use the stuff below.
 		</div>
 
 		<div id="db_relations" 
 			class="split_column"
-			style="margin-top:30; margin-left:10; line-height:1.4">
+			style="border-bottom:solid #31F0B1 2px; margin-top:30; margin-left:5; margin-bottom:30; line-height:1.4; padding-bottom:20">
 			Relations
 			<ul>
 				<li><a onclick="sendRelation(1);" style="color:31F0B1;" href="#"> Performer </a></li>
@@ -36,7 +44,7 @@
 
 		<div id="db_queries" 
 			class="split_column"
-			style="margin-top:30; line-height:1.4">
+			style="border-bottom:solid #31F0B1 2px; margin-top:30; margin-bottom:30; line-height:1.4; padding-bottom:20">
 			Queries
 			<ul>
 				<li><a onclick="sendQuery(1);" style="color:31F0B1;" href="#"> Query 1 </a></li>
@@ -47,10 +55,21 @@
 			</ul>
 		</div>
 
+		<div id="page_content2"
+			style="font-size:1.2em; padding-left:30; margin-left:5; margin-bottom:50" >
+			Directions on how to use adhoc stuff below.
+		</div>
+		
 		<form id="portal" action="./results.php" method="POST">
-			<input type="text" id="q_v" name="query" value="" placeholder="Type SQL query here"/>
+			<input type="text" id="q_v" name="query" value="" placeholder="Type SQL query here" style="margin-left:10; margin-bottom: 40"/>
 			<input type="submit" value="Submit">
 		</form>
+		
+		<div id="class details"
+			align="right"
+			style="font-size:.7em; margin-right:20; margin-bottom:50" >
+			CS4604 @ VT - Prakash
+		</div>
 
 	</body>
 
