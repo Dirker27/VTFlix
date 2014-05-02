@@ -73,30 +73,11 @@ function GetResult()
 	//
 	$sql = null;
 	$table = null;
-	switch($q) {
-		case 1:
-		$sql = 'SELECT COUNT(*) FROM Performer;';
-		break;
 
-		case 2:
-		$sql = 'SELECT COUNT(*) FROM Director;';
-		break;
 
-		case 3:
-		$sql = 'SELECT COUNT(*) FROM MovieInfo;';
-		break;
+	// <Srub query here somewhere>
 
-		case 4:
-		$sql = 'SELECT COUNT(*) FROM TVEpisodeInfo;';
-		break;
-
-		case 5:
-		$sql = 'SELECT COUNT(*) FROM UserInfo;';
-		break;
-
-		default:
-		break;
-	}
+	$sql = $q;
 
 	//$rows = QueryDB($sql);
 
