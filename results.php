@@ -6,10 +6,13 @@
 	
 	<head>
 		<title> Team Debauchery - Results </title>
+		<link rel="stylesheet" type="text/css" href="./includes/css/style.css">
 	</head>
 
 	<body>
-		<?php echo GetResult(); ?>
+		<div id="data_display">
+			<?php echo GetResult(); ?>
+		</div>
 	</body>
 
 <html>
