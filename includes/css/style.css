@@ -1,7 +1,7 @@
 body {
 	font-family: 'Arimo', sans-serif;
 	color: #FFFFFF;
-	background-color: #000066
+	background-color: #151828
 }
 h1 {
 	font-family: 'Arimo', sans-serif;
@@ -11,6 +11,15 @@ h1 {
 	margin-bottom: 10px;
     padding: 1px;
 	font-size: 8em;
+}
+h2 {
+	font-family: 'Arimo', sans-serif;
+	color: 31F0B1;
+	margin-left: 50px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+    padding: 1px;
+	font-size: 6em;
 }
 h3 {
 	font-family: 'Arimo', sans-serif;
@@ -27,6 +36,37 @@ h4 {
 	margin-bottom: 30px;
     padding: 5px;
 }
+
+table {
+    width:90%;
+    border-top:1px solid #AEF0DD;
+    border-right:1px solid #AEF0DD;
+	border-left:1px solid #AEF0DD;
+	border-bottom:1px solid #AEF0DD;
+    margin:1em auto;
+    border-collapse:collapse;
+	background-color: #FFFFFF;
+	color: #151828;
+}
+
+td {
+    padding:.3em 1em;
+    text-align:center;
+	border-bottom:1px solid #AEF0DD;
+}
+
+tr:nth-child(even) {
+    background-color: #E0F8F1;
+}
+
+thead {
+	font-family: 'Arimo', sans-serif;
+	padding: 6px 6px 6px 12px;
+	background-color: #E0F8F1;
+	font-size: 1.2em
+
+}
+
 /*p {
 	padding: 1px, 1px, 1px, 1px;
 }*/
