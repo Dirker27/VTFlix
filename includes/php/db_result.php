@@ -81,16 +81,16 @@ function GetResult()
 		$sql = $q;
 	}
 
-	//$rows = QueryDB($sql);
+	$rows = QueryDB($sql);
 
-	$rows = array();
+	/*$rows = array();
 	$rows[-1] = array('SSN', 'First_Name', 'Last_Name', 'Gender');
 	$rows[0] = array(128629865, 'Sherlock', 'Holmes', 'M');
 	$rows[1] = array(577974093, 'Moycroft', 'Holmes', 'M');
 	$rows[2] = array(965836254, 'John', 'Watson', 'M');
 	$rows[3] = array(971518441, 'Irene', 'Adler', 'F');
 	$rows[4] = array(816629811, 'James', 'Moriarty', 'M');
-	$rows[5] = array(164816494, 'Greggory', 'Lestate', 'M');
+	$rows[5] = array(164816494, 'Greggory', 'Lestate', 'M');*/
 
 	return GenerateTable($rows);
 }

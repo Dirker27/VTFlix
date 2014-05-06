@@ -81,7 +81,7 @@ function userReccomend() {
 	}
 
 	var sql = 'SELECT mtitle FROM MovieInfo WHERE mid IN (';
-	sql += 'SELECT mid FROM Ratings WHERE rate_score > 3 AND uid IN (';
+	sql += 'SELECT vid FROM Ratings WHERE rate_score > 3 AND uid IN (';
 	sql += 'SELECT uid2 FROM Friends WHERE uid1 = ' + user_id + '))';
 
 	data.value = sql;
