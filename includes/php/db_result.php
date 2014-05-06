@@ -65,6 +65,13 @@ function GenerateTable($rows)
 
 function GetResult()
 {
+	$ILLEGAL_COMMANDS = array(	'ALTER',
+							'CREATE',
+							'DROP',
+							'INSERT',
+							'MODIFY',
+							'TRUNCATE',
+							'UPDATE');
 	$q = $_REQUEST['query'];
 	
 	//~ EXTRACT INPUT TO SQL ================================ ~//
@@ -72,16 +79,20 @@ function GetResult()
 	//- Relation -------------------------------------=
 	//
 	$sql = '';
-	$table = null;
-
+	if ($q == '') {
+		return "<p>No Query Given.</p>";
+	}
 
 	// <Scrub query here somewhere>
-	$tok = strtok($q, " ");
-	if (strcasecmp($tok, 'SELECT') == 0) {
-		$sql = $q;
-	} else {
-		return "UNSAFE QUERY! Only SELECT statements allowed.";
+	$tok = strtok($q, " \n\t,;");
+	while ($tok) {
+		$t = strtoupper($tok);
+		if (in_array($t, $ILLEGAL_COMMANDS)) {
+			return "<p><b>Aborted.</b><br/>Illegal Command Detected: $t</p>";
+		}
+		$tok = strtok(" \n\t,;");
 	}
+	$sql = $q;
 
 	$rows = QueryDB($sql);
 
