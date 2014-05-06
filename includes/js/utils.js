@@ -50,7 +50,7 @@ function sendQuery(q) {
 
 		case 3:
 		// Performer in most movies
-		sql = "SELECT first_name, last_name FROM Performer WHERE (SELECT pid, COUNT(*) AS c FROM ActIn WHERE vid IN (SELECT mid FROM MovieInfo)) GROUP BY Performer.pid ORDER BY c DESC LIMIT 1";
+		sql = "SELECT first_name, last_name FROM Performer, (SELECT ActIn.pid, COUNT(*) as c FROM ActIn WHERE vid IN (SELECT mid FROM MovieInfo) GROUP BY ActIn.pid ORDER BY c DESC LIMIT 1) AS P WHERE Performer.pid = P.pid";
 		break;
 
 		case 4:
