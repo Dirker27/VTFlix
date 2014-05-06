@@ -55,7 +55,7 @@ function sendQuery(q) {
 
 		case 4:
 		// List 10 videos in the Fantasy genre
-		sql = "SELECT title FROM Videos WHERE vid IN (SELECT vid FROM BelongToGenre WHERE genre = 'Fantasy') LIMIT 10";
+		sql = "SELECT title FROM VideoInfo WHERE vid IN (SELECT vid FROM BelongToGenre WHERE genre = 'Fantasy') LIMIT 10";
 		break;
 
 		case 5:
