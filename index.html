@@ -26,7 +26,7 @@
 
 		<div id="page_content1"
 			style="border-top:solid #31F0B1 2px; font-size:1.2em; padding-top:30; padding-left:30; margin-left:5; margin-right:5" >
-			Directions on how to use the stuff below.
+			Click on the below links to open a new page with the relation and query results.
 		</div>
 
 		<div id="db_relations" 
@@ -47,27 +47,32 @@
 			style="border-bottom:solid #31F0B1 2px; margin-top:30; margin-bottom:30; line-height:1.4; padding-bottom:20">
 			Queries
 			<ul>
-				<li><a onclick="sendQuery(1);" style="color:31F0B1;" href="#"> Query 1 </a></li>
-				<li><a onclick="sendQuery(2);" style="color:31F0B1;" href="#"> Query 2 </a></li>
-				<li><a onclick="sendQuery(3);" style="color:31F0B1;" href="#"> Query 3 </a></li>
-				<li><a onclick="sendQuery(4);" style="color:31F0B1;" href="#"> Query 4 </a></li>
-				<li><a onclick="sendQuery(5);" style="color:31F0B1;" href="#"> Query 5 </a></li>
+				<li><a onclick="sendQuery(1);" style="color:31F0B1;" href="#"> 10 latest videos Brad Pitt was in </a></li>
+				<li><a onclick="sendQuery(2);" style="color:31F0B1;" href="#"> User with most friends </a></li>
+				<li><a onclick="sendQuery(3);" style="color:31F0B1;" href="#"> Performer in most movies </a></li>
+				<li><a onclick="sendQuery(4);" style="color:31F0B1;" href="#"> 10 videos from Fantasy genre </a></li>
+				<li><a onclick="sendQuery(5);" style="color:31F0B1;" href="#"> All friends of user John Abbey </a></li>
 			</ul>
 		</div>
 
 		<div id="page_content2"
 			style="font-size:1.2em; padding-left:30; margin-left:5; margin-bottom:50" >
-			Directions on how to use adhoc stuff below.
+			Type in a sql SELECT query and click the submit button to view the results, or type in a user id and click the submit button to view movies that the user's friends have given a four or five star rating to.
 		</div>
 		
-		<form id="portal" action="./results.php" method="POST">
-			<input type="text" id="q_v" name="query" value="" placeholder="Type SQL query here" style="margin-left:10; margin-bottom: 40"/>
-			<input type="submit" value="Submit">
-			<input type="reset" value="Clear"/>
+		<form id="portal" action="./results.php" method="POST"></form>
+		
+		<div>
+			<input type="text" id="q_v" name="query" value="" placeholder="Type SQL query here" style="margin-left:10; margin-bottom: 20; color:151828; background-color:#E0F8F1; border: 2px solid #31F0B1; -webkit-border-radius: 30px; -moz-border-radius: 30px;     border-radius: 30px; "/>
+			<input type="submit" value="Submit" style="font-family: 'Arimo', sans-serif"/>
+			<input type="reset" value="Clear"/ style="font-family: 'Arimo', sans-serif">
 			<br/>
-			<input type="text" id="user_id" name="user_id" value="" placeholder="User ID [UID]" style="margin-left:10; margin-bottom: 40"/>
-			<input type="button" value="Go!" onclick="userReccomend();">
-		</form>
+			<input type="text" id="user_id" name="user_id" value="" placeholder="User ID [UID]" style="margin-left:10; margin-bottom: 40; background-color:#E0F8F1; border: 2px solid #31F0B1; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; color:151828"/>
+			<input type="button" value="Submit" onclick="userReccomend();"style="font-family: 'Arimo', sans-serif"/>
+			<input type="reset" value="Clear" style="font-family: 'Arimo', sans-serif"/>
+		</div>
+		
+		
 		
 		<div id="class details"
 			align="right"
