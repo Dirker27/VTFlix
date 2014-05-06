@@ -76,10 +76,10 @@ function GetResult()
 
 
 	// <Srub query here somewhere>
-	$tok = strtok($q, " ,\n\t");
-	if (strcasecmp($tok[0], 'SELECT') == 0) {
+	//$tok = strtok($q, " ,\n\t");
+	//if (strcasecmp($tok[0], 'SELECT') == 0) {
 		$sql = $q;
-	}
+	//}
 
 	$rows = QueryDB($sql);
 
