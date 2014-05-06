@@ -67,3 +67,24 @@ function sendQuery(q) {
 	data.value = sql;
 	form.submit();
 }
+
+function userReccomend() {
+	var form = document.getElementById('portal');
+	var user_box = document.getElementById('user_id');
+	var data = document.getElementById('q_v');
+
+	var user_id = Number(user_box.value);
+
+	if (user_id == NaN) {
+		alert('User ID must be a number!');
+		return;
+	}
+
+	var sql = 'SELECT mtitle FROM MovieInfo WHERE mid IN (';
+	sql += 'SELECT mid FROM Ratings WHERE rate_score > 3 AND uid IN (';
+	sql += 'SELECT uid2 FROM Friends WHERE uid1 = ' + user_id + '))';
+
+	data.value = sql;
+	user_box.value = "";
+	form.submit();
+}
