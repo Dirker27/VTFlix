@@ -54,7 +54,7 @@ function GenerateTable($rows)
 			$html .= "\t\t\t<td>" . $data . "</td>\n";
 		}
 
-		$html .= "\t\t<tr>\n"; 
+		$html .= "\t\t</tr>\n"; 
 	}
 	$html .= "\t</tbody>";
 
@@ -75,11 +75,13 @@ function GetResult()
 	$table = null;
 
 
-	// <Srub query here somewhere>
-	//$tok = strtok($q, " ,\n\t");
-	//if (strcasecmp($tok[0], 'SELECT') == 0) {
+	// <Scrub query here somewhere>
+	$tok = strtok($q, " ");
+	if (strcasecmp($tok, 'SELECT') == 0) {
 		$sql = $q;
-	//}
+	} else {
+		return "UNSAFE QUERY! Only SELECT statements allowed.";
+	}
 
 	$rows = QueryDB($sql);
 
