@@ -50,17 +50,17 @@ function sendQuery(q) {
 
 		case 3:
 		// Performer in most movies
-		sql = "SELECT first_name, last_name FROM Performer WHERE (SELECT pid, COUNT(*) AS c FROM ActIn GROUP BY pid ORDER BY c DESC LIMIT 1 WHERE vid IN (SELECT mid FROM MovieInfo))";
+		sql = "SELECT first_name, last_name FROM Performer WHERE (SELECT pid, COUNT(*) AS c FROM ActIn WHERE vid IN (SELECT mid FROM MovieInfo)) GROUP BY pid ORDER BY c DESC LIMIT 1";
 		break;
 
 		case 4:
 		// List 10 videos in the Fantasy genre
-		sql = "SELECT title FROM Videos WHERE (SELECT vid FROM BelongToGenre WHERE genre = 'Fantasy') DESC LIMIT 10";
+		sql = "SELECT title FROM Videos WHERE (SELECT vid FROM BelongToGenre WHERE genre = 'Fantasy') LIMIT 10";
 		break;
 
 		case 5:
 		// List all friends of John Abbey
-		sql = "SELECT first_name, last_name FROM UserInfo WHERE (SELECT uid FROM Friends WHERE uid1 = (SELECT uid FROM UserInfo WHERE first_name = 'John' AND last_name = 'Abbey')";
+		sql = "SELECT first_name, last_name FROM UserInfo WHERE (SELECT uid FROM Friends WHERE uid1 = (SELECT uid FROM UserInfo WHERE first_name = 'John' AND last_name = 'Abbey'))";
 		break;
 
 		default:
