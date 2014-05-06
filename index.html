@@ -15,8 +15,7 @@
 		</style>
 	</head>
 
-	<body onload="initialize_js();">
-	
+	<body>
 		<div id="header_content" >
 			<a href="http://imgur.com/1ajuN5B"><img src="http://i.imgur.com/1ajuN5B.png" float=right height=200 width=500 style="margin-right:160" /></a>
 			<h1> VTFlix </h1>
@@ -64,12 +63,12 @@
 		
 		<div>
 			<input type="text" id="q_v" name="query" value="" placeholder="Type SQL query here" style="margin-left:10; margin-bottom: 20; color:151828; background-color:#E0F8F1; border: 2px solid #31F0B1; -webkit-border-radius: 30px; -moz-border-radius: 30px;     border-radius: 30px; "/>
-			<input type="submit" value="Submit" style="font-family: 'Arimo', sans-serif"/>
-			<input type="reset" value="Clear"/ style="font-family: 'Arimo', sans-serif">
+			<input type="button" value="Submit" onclick="form_submit();" style="font-family: 'Arimo', sans-serif"/>
+			<input type="button" value="Clear"/ onclick="reset('q_v');" style="font-family: 'Arimo', sans-serif">
 			<br/>
 			<input type="text" id="user_id" name="user_id" value="" placeholder="User ID [UID]" style="margin-left:10; margin-bottom: 40; background-color:#E0F8F1; border: 2px solid #31F0B1; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; color:151828"/>
 			<input type="button" value="Submit" onclick="userReccomend();"style="font-family: 'Arimo', sans-serif"/>
-			<input type="reset" value="Clear" style="font-family: 'Arimo', sans-serif"/>
+			<input type="button" value="Clear" onclick="reset('user_id');" style="font-family: 'Arimo', sans-serif"/>
 		</div>
 		
 		

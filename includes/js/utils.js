@@ -1,16 +1,5 @@
-function initialize_js() {
-	var user_box = document.getElementById('user_id');
-	var query_box = document.getElementById('query_box');
-
-	user_box.keypress(function(e){
-		if(e.keyCode==13)
-		userReccomend();
-	});
-
-	query_box.keypress(function(e){
-		if(e.keyCode==13)
-		form_submit;
-	});
+function reset(r) {
+	document.getElementById(r).value = "";
 }
 
 function sendRelation(r) {
@@ -93,8 +82,9 @@ function userReccomend() {
 
 	var user_id = Number(user_box.value);
 
-	if (user_id == NaN) {
+	if (isNaN(user_id)) {
 		alert('User ID must be a number!');
+		data.value = "";
 		return;
 	}
 
