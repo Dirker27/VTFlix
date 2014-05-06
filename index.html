@@ -59,10 +59,12 @@
 			Type in a sql SELECT query and click the submit button to view the results, or type in a user id and click the submit button to view movies that the user's friends have given a four or five star rating to.
 		</div>
 		
-		<form id="portal" action="./results.php" method="POST"></form>
-		
+		<form id="portal" action="./results.php" method="POST">
+			<input type="hidden" id="query" name="query"/>
+		</form>
+	
 		<div>
-			<input type="text" id="q_v" name="query" value="" placeholder="Type SQL query here" style="margin-left:10; margin-bottom: 20; color:151828; background-color:#E0F8F1; border: 2px solid #31F0B1; -webkit-border-radius: 30px; -moz-border-radius: 30px;     border-radius: 30px; width:300px "/>
+			<input type="text" id="q_v" name="q_v" value="" placeholder="Type SQL query here" style="margin-left:10; margin-bottom: 20; color:151828; background-color:#E0F8F1; border: 2px solid #31F0B1; -webkit-border-radius: 30px; -moz-border-radius: 30px;     border-radius: 30px; width:300px "/>
 			<input type="button" value="Submit" onclick="form_submit();" style="font-family: 'Arimo', sans-serif"/>
 			<input type="button" value="Clear"/ onclick="reset('q_v');" style="font-family: 'Arimo', sans-serif">
 			

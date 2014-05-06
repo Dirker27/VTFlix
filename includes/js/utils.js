@@ -4,7 +4,7 @@ function reset(r) {
 
 function sendRelation(r) {
 	var form = document.getElementById('portal');
-	var data = document.getElementById('q_v');
+	var data = document.getElementById('query');
 	var sql = '';
 
 	switch(r) {
@@ -38,7 +38,7 @@ function sendRelation(r) {
 
 function sendQuery(q) {
 	var form = document.getElementById('portal');
-	var data = document.getElementById('q_v');
+	var data = document.getElementById('query');
 	var sql = '';
 
 	switch(q) {
@@ -78,7 +78,7 @@ function sendQuery(q) {
 function userReccomend() {
 	var form = document.getElementById('portal');
 	var user_box = document.getElementById('user_id');
-	var data = document.getElementById('q_v');
+	var data = document.getElementById('query');
 
 	var user_id = Number(user_box.value);
 
@@ -98,5 +98,10 @@ function userReccomend() {
 }
 
 function form_submit() {
+	var query_box = document.getElementById('q_v');
+	var data = document.getElementById('query');
+
+	data.value = query_box.value;
+
 	document.getElementById('portal').submit();
 }
