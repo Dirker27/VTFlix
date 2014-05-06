@@ -39,10 +39,12 @@ function sendQuery(q) {
 
 	switch(q) {
 		case 1:
-		sql = 'SELECT pid, vid FROM ActIn LIMIT 20;';
+		// Brad Pitt Movies
+		sql = 'SELECT title FROM VideoInfo WHERE vid IN farts....;';
 		break;
 
 		case 2:
+		// User w/ most friends
 		sql = 'SELECT pid, vid FROM ActIn LIMIT 20;';
 		break;
 
