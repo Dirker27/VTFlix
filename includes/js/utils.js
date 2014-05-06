@@ -1,3 +1,18 @@
+function initialize_js() {
+	var user_box = document.getElementById('user_id');
+	var query_box = document.getElementById('query_box');
+
+	user_box.keypress(function(e){
+		if(e.keyCode==13)
+		userReccomend();
+	});
+
+	query_box.keypress(function(e){
+		if(e.keyCode==13)
+		form_submit;
+	});
+}
+
 function sendRelation(r) {
 	var form = document.getElementById('portal');
 	var data = document.getElementById('q_v');
@@ -90,4 +105,8 @@ function userReccomend() {
 	data.value = sql;
 	user_box.value = "";
 	form.submit();
+}
+
+function form_submit() {
+	document.getElementById('portal').submit();
 }
